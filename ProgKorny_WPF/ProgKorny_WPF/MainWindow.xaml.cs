@@ -22,8 +22,8 @@ namespace ProgKorny_WPF
     public partial class MainWindow : Window
     {
         DispatcherTimer gameTimer = new DispatcherTimer();
-        bool moveLeft, moveRight;
         List<Rectangle> itemRemover = new List<Rectangle>();
+        bool moveLeft, moveRight;
 
         Random rnd = new Random();
         int enemyCounter = 100;
@@ -159,6 +159,16 @@ namespace ProgKorny_WPF
                 damageText.Content = "Damage: 100";
                 damageText.Foreground = Brushes.Red;
                 MessageBox.Show("Score: " + score + Environment.NewLine + "Press OK to play again","Game Over");
+
+                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                Application.Current.Shutdown();
+            }
+            if (score > 99)
+            {
+                gameTimer.Stop();
+                scoreText.Content = "Score: 100";
+                scoreText.Foreground = Brushes.Green;
+                MessageBox.Show("Score: " + score + Environment.NewLine + "Press OK to play again", "You Win");
 
                 System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
                 Application.Current.Shutdown();
