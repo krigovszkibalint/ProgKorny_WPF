@@ -1,0 +1,15 @@
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF.csprojAssemblyReference.cache
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\App.g.cs
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF_MarkupCompile.cache
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF_MarkupCompile.lref
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\MainWindow.baml
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF.g.resources
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF.pdb
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\bin\Debug\ProgKorny_WPF.exe.config
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\bin\Debug\ProgKorny_WPF.exe
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\bin\Debug\ProgKorny_WPF.pdb
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF.Properties.Resources.resources
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF.csproj.GenerateResource.cache
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF.csproj.CoreCompileInputs.cache
+C:\Users\Scy\Desktop\ProgKorny_WPF\ProgKorny_WPF\ProgKorny_WPF\obj\Debug\ProgKorny_WPF.exe

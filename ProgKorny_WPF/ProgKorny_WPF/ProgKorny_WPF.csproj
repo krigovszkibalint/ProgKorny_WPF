@@ -98,10 +98,10 @@
     <Resource Include="img\space.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\syringe.png" />
+    <Resource Include="img\starfighter.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\coronavirus.png" />
+    <Resource Include="img\vulture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
