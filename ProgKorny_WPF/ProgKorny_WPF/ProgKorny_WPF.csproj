@@ -98,10 +98,12 @@
     <Resource Include="img\space.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\starfighter.png" />
+    <Resource Include="img\player.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\vulture.png" />
+    <Resource Include="img\enemy1.png" />
+    <Resource Include="img\enemy2.png" />
+    <Resource Include="img\enemy3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

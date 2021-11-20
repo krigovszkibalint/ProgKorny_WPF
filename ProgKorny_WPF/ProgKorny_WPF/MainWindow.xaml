@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="KDPEQ8_WPF" Height="620" Width="550">
     <Canvas Name="canvasBackground" Focusable="True" Background="Black" KeyDown="OnKeyDown" KeyUp="OnKeyUp">
-        <Rectangle Name="player" Height="70" Width="50" Fill="Green" Canvas.Left="240" Canvas.Top="500" />
-        <Label Name="scoreText" Content="Score: 0" FontSize="18" FontFamily="Star Jedi" Foreground="White" Canvas.Left="10" Canvas.Top="552"/>
+        <Rectangle Name="player" Height="70" Width="50" Fill="Green" Canvas.Left="240" Canvas.Top="470" />
+        <Label Name="scoreText" Content="Score: 0" FontSize="18" FontFamily="Star Jedi" Foreground="White" Canvas.Left="10" Canvas.Top="543"/>
         <Label Name="damageText" Content="Damage:  0" FontSize="18" FontFamily="Star Jedi" Foreground="White" Canvas.Left="406" Canvas.Top="543"/>
     </Canvas>
 </Window>

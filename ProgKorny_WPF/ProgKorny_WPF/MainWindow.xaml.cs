@@ -53,13 +53,30 @@ namespace ProgKorny_WPF
             canvasBackground.Background = bg;
 
             ImageBrush playerImage = new ImageBrush();
-            playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/starfighter.png"));
+            playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/player.png"));
             player.Fill = playerImage;
         }
 
         private void GameLoop(object sender, EventArgs e)
         {
+            playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width, player.Height);
 
+            enemyCounter -= 1;
+
+            scoreText.Content = "Score: " + score;
+            damageText.Content = "Damage: " + damage;
+
+            if (enemyCounter < 0)
+            {
+                SpawnEnemies();
+                enemyCounter = limit;
+            }
+
+            if (moveLeft == true && Canvas.GetLeft(player) > 0)
+                Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
+
+            if (moveRight == true && Canvas.GetLeft(player) + 90 < Application.Current.MainWindow.Width)
+                Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
