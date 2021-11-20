@@ -83,7 +83,51 @@ namespace ProgKorny_WPF
                 if (x is Rectangle && (string)x.Tag == "Bullet")
                 {
                     Canvas.SetTop(x, Canvas.GetTop(x) - 20);
+
+                    Rect bulletHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    if (Canvas.GetTop(x) < 10)
+                        itemRemover.Add(x);
+
+                    foreach (var y in canvasBackground.Children.OfType<Rectangle>())
+                    {
+                        if (y is Rectangle && (string)y.Tag == "Enemy")
+                        {
+                            Rect enemyHit = new Rect(Canvas.GetLeft(y), Canvas.GetTop(y), y.Width, y.Height);
+
+                            if (bulletHitBox.IntersectsWith(enemyHit))
+                            {
+                                itemRemover.Add(x);
+                                itemRemover.Add(y);
+                                score++;
+                            }
+                        }
+                    }
+
                 }
+
+                if (x is Rectangle && (string)x.Tag == "Enemy")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) + enemySpeed);
+
+                    if (Canvas.GetTop(x) > 620)
+                    {
+                        itemRemover.Add(x);
+                        damage += 5;
+                    }
+
+                    Rect enemyHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    if (playerHitBox.IntersectsWith(enemyHitBox))
+                    {
+                        itemRemover.Add(x);
+                        damage += 10;
+                    }
+                }
+            }
+            foreach (Rectangle i in itemRemover)
+            {
+                canvasBackground.Children.Remove(i);
             }
 
         }
@@ -126,7 +170,7 @@ namespace ProgKorny_WPF
         private void SpawnEnemies()
         {
             ImageBrush enemySprite = new ImageBrush();
-            enemyCounter = rnd.Next(1, 3);
+            enemyCounter = rnd.Next(1, 4);
             switch (enemyCounter)
             {
                 case 1:
@@ -143,13 +187,13 @@ namespace ProgKorny_WPF
             Rectangle newEnemy = new Rectangle
             {
                 Tag = "Enemy",
-                Height = 70,
+                Height = 50,
                 Width = 50,
                 Fill = enemySprite
             };
 
             Canvas.SetTop(newEnemy, -100);
-            Canvas.SetLeft(newEnemy, rnd.Next(30, 520));
+            Canvas.SetLeft(newEnemy, rnd.Next(30, 500));
             canvasBackground.Children.Add(newEnemy);
         }
     }
