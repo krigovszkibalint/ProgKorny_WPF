@@ -130,6 +130,40 @@ namespace ProgKorny_WPF
                 canvasBackground.Children.Remove(i);
             }
 
+            switch (score)
+            {
+                case 5:
+                    limit = 12;
+                    enemySpeed = 11;
+                    break;
+                case 20:
+                    limit = 14;
+                    enemySpeed = 12;
+                    break;
+                case 40:
+                    limit = 16;
+                    enemySpeed = 13;
+                    break;
+                case 60:
+                    limit = 18;
+                    enemySpeed = 14;
+                    break;
+                case 80:
+                    limit = 20;
+                    enemySpeed = 15;
+                    break;
+            }
+            if (damage > 99)
+            {
+                gameTimer.Stop();
+                damageText.Content = "Damage: 100";
+                damageText.Foreground = Brushes.Red;
+                MessageBox.Show("Score: " + score + Environment.NewLine + "Press OK to play again","Game Over");
+
+                System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+                Application.Current.Shutdown();
+            }
+
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
