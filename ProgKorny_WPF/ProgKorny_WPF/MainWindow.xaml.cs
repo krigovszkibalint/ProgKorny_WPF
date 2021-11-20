@@ -99,7 +99,32 @@ namespace ProgKorny_WPF
 
         private void SpawnEnemies()
         {
+            ImageBrush enemySprite = new ImageBrush();
+            enemyCounter = rnd.Next(1, 3);
+            switch (enemyCounter)
+            {
+                case 1:
+                    enemySprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/enemy1.png"));
+                    break;
+                case 2:
+                    enemySprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/enemy2.png"));
+                    break;
+                case 3:
+                    enemySprite.ImageSource = new BitmapImage(new Uri("pack://application:,,,/img/enemy3.png"));
+                    break;
+            }
 
+            Rectangle newEnemy = new Rectangle
+            {
+                Tag = "Enemy",
+                Height = 70,
+                Width = 50,
+                Fill = enemySprite
+            };
+
+            Canvas.SetTop(newEnemy, -100);
+            Canvas.SetLeft(newEnemy, rnd.Next(30, 520));
+            canvasBackground.Children.Add(newEnemy);
         }
     }
 }
