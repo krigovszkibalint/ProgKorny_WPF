@@ -75,8 +75,17 @@ namespace ProgKorny_WPF
             if (moveLeft == true && Canvas.GetLeft(player) > 0)
                 Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
 
-            if (moveRight == true && Canvas.GetLeft(player) + 90 < Application.Current.MainWindow.Width)
+            if (moveRight == true && Canvas.GetLeft(player) + 70 < Application.Current.MainWindow.Width)
                 Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
+
+            foreach (var x in canvasBackground.Children.OfType<Rectangle>())
+            {
+                if (x is Rectangle && (string)x.Tag == "Bullet")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) - 20);
+                }
+            }
+
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)
@@ -100,7 +109,7 @@ namespace ProgKorny_WPF
             {
                 Rectangle newBullet = new Rectangle
                 {
-                    Tag = "bullet",
+                    Tag = "Bullet",
                     Height = 20,
                     Width = 4,
                     Fill = Brushes.White,
